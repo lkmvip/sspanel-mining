@@ -73,5 +73,5 @@ def get_ctx(silence: Optional[bool] = None):
     options.add_argument('--user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
                          '(KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"')
     # 使用 ChromeDriverManager 托管服务，自动适配浏览器驱动
-    service = Service(ChromeDriverManager(log_level=0).install())
+    service = Service(ChromeDriverManager().install())
     return Chrome(options=options, service=service)  # noqa
